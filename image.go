@@ -1,11 +1,12 @@
 package main
 
 import (
-	"os"
+	"fmt"
 	"image"
 	_ "image/jpeg" // we could initialize the decoder instead of importing this
-	// _ "image/png"
+	_ "image/png"
 	"log"
+	"os"
 )
 
 func printPixels(image image.Image) {
@@ -26,8 +27,16 @@ func printPixels(image image.Image) {
 
 func main() {
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+
+	args := os.Args
+	if(len(args) < 2) {
+		fmt.Print("Not enough arguments\nUsage: ./image <image-name>.png/jpeg\n")
+		os.Exit(1)
+	}
+	//TODO should check correct name and format like : <not too long name>.jpeg/png
+	// even if os.Open checks for existence of file with given path
 	
-	data, err := os.Open("yellow.jpg")
+	data, err := os.Open(args[1])
 	if err != nil {
 		log.Fatal("Could not open image: ", err)
 	}
