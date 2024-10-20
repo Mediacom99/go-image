@@ -1,3 +1,7 @@
 * Go-Image
 
 I need/want to learn Golang so I guess I'll do something with the `image` module in Go's standard library.
+
+* Resources
+
+- [[https://graphicsinterface.org/wp-content/uploads/gi1986-15.pdf][Alan W. Path - Fast Algo For General Raster Rotation]]
