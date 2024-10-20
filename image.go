@@ -8,8 +8,18 @@ import (
 )
 
 func main() {
-	data, _ := os.Open("windypic.jpg")
-	data_image, format_name, _ := image.Decode(data)
+	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+	
+	data, err := os.Open("windypic.jpg")
+	if err != nil {
+		log.Fatal("Could not open image: ", err)
+	}
+	
+	data_image, format_name, err := image.Decode(data)
+	if err != nil {
+		log.Fatal("Could not decode jpeg image: ", err)
+	}
+	
 	log.Println("Format name:", format_name)
 	log.Println("Image bounds:", data_image.Bounds().Max)
 	log.Println(data_image.Bounds().At(0,0).RGBA)
