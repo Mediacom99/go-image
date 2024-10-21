@@ -10,11 +10,6 @@ import (
 	"os"
 )
 
-
-//IDEA
-// I should organize this in a library with a struct that holds the image to modify
-// so that I can do png and jpeg together
-
 //FIXME
 //there must be a better way
 func logfat(err error, msg string) {
@@ -23,23 +18,13 @@ func logfat(err error, msg string) {
 	}
 }
 
-// We deal with jpeg, make a function to turn png into jpeg
-func convertJpegToPng() error {
-	return nil
-}
-
-// Should check and initialize properly for jpeg and png
-// considering for jpeg I have to create a new image of type RGBA
-// and redraw the original that was an image.YCbCr
-// For now I only handle jpeg images. I will add a function to convert
-// a png to a jpeg image.
-
+// For now it only handles jpeg images.
 func main() {
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
 
 	args := os.Args
 	if(len(args) < 2) {
-		fmt.Print("Not enough arguments\nUsage: ./image <image-name>.png/jpeg\n")
+		fmt.Print("Not enough arguments\nUsage: ./image <image-name>.jpeg\n")
 		os.Exit(1)
 	}
 
@@ -51,19 +36,23 @@ func main() {
 	data_image, decode_err := jpeg.Decode(data)
 	logfat(decode_err, "Error decoding input image:")
 
-	log.Println("Image bounds:", data_image.Bounds().Max)
-	log.Printf("%T\n", data_image)
+	log.Println("Image max bounds:", data_image.Bounds().Max)
+	log.Println("Image min bounds:", data_image.Bounds().Min)
 
 	// Convert image to image.RGBA for modifying
 	new_image := RedrawImageIntoRgba(data_image)
 
+	// Apply some modification to the image
 	ModEachPixel(new_image, Inverted)
+	// MakeSomeSquares(new_image, color.RGBA{0,0,0,0}, 17)
 
-	encode_err := EncodeRgbaToJpeg(&new_image)
+	// Encode the image into jpeg and save it to a file
+	encode_err := EncodeImageToJpeg(&new_image)
 	logfat(encode_err, "Error encoding image data into jpeg image:")
 }
 
-func EncodeRgbaToJpeg(image_data image.Image) error {
+// Encode image with jpeg format and save it to file
+func EncodeImageToJpeg(image_data image.Image) error {
 	//Create new file to hold new image
 	outfile, open_err := os.Create("NEWIMAGE.jpeg")
 	if open_err != nil { return open_err }
@@ -106,11 +95,11 @@ func RedrawImageIntoRgba(image_data image.Image) image.RGBA {
 }
 
 // Colors the pixels with `color` for which x%mod == y%mod == 0
-func MakeSomeSquares(image_data image.RGBA, color color.Color, mod uint32) {
+func MakeGrid(image_data image.RGBA, color color.Color, mod int) {
 	image_bounds := image_data.Bounds()
 	for y := image_bounds.Min.Y; y < image_bounds.Max.Y; y++ {
 		for x := image_bounds.Min.X; x < image_bounds.Max.X; x++ {
-			if x%11 == 0 || y%11 == 0 {
+			if x%mod == 0 || y%mod == 0 {
 				image_data.Set(x,y, color)
 			}
 		}
