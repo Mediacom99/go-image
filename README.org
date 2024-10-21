@@ -10,4 +10,24 @@ I need/want to learn Golang so I guess I'll do something with the `image` module
 
 1. Structure project using go module as library
 2. Divide library in multiple source files
+3. List of things that I could implement:
+   - Select zone in image with same color so that I can change the rest
+   - Transformation (Rotation, Shearing)
+   - Resizing
+   - Cropping
+   - Flipping
+   - Color Adjustment:
+     - brightness
+     - contrast
+     - saturation
+     - hue
+   - Sepia tone
+   - Custom palette
+   - Pixelation effect
+   - Vintage camera effect
+   - Distortion effects (wave, twirl)
+   - Edge detection (Laplacian Filtering, Bilateral Filtering)
+   - Gaussian blur
+   - Radon Transform for Image reconstruction
+   - Face recognition / edge recognition
   
