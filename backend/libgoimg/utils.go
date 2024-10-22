@@ -4,10 +4,10 @@ import "log"
 import "image"
 
 //FIXME
-//there must be a better way
+// there must be a better way
 func LogFat(err error, msg string) {
 	if err != nil {
-		log.Fatal(msg, err)
+		log.Fatal(msg + ": ", err)
 	}
 }
 

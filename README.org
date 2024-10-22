@@ -9,8 +9,9 @@ I need/want to learn Golang so I guess I'll do something with the `image` module
 * Todo
 
 1. Structure project using go module as library
-2. Divide library in multiple source files
-3. List of things that I could implement:
+2. Add parallelization if it makes sense
+3. Divide library in multiple source files
+4. List of things that I could implement:
    - Select zone in image with same color so that I can change the rest
    - Transformation (Rotation, Shearing)
    - Resizing
