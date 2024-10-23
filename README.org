@@ -1,6 +1,7 @@
 * Goimg
 
-I need/want to learn Golang so I guess I'll do something with the `image` module in Go's standard library.
+I need/want to learn Golang so I guess I'll do something with the `image` package in Go's standard library.
+I'm thinking of an image editor with served with web UI.
 
 * Resources
 
