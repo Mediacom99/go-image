@@ -1,4 +1,4 @@
-* Go-Image
+* Goimg
 
 I need/want to learn Golang so I guess I'll do something with the `image` module in Go's standard library.
 
