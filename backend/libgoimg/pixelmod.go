@@ -23,6 +23,19 @@ const (
 	Inverted                  // 1
 )
 
+// Simple parser that converts string command to ImageMod token.
+// The token should be used as input for libgi.ModEachPixel in order
+func GetCommandToken(cmd string) ImageMod {
+	switch cmd {
+	case "greyscale":
+		return Grayscale
+	case "inverted":
+		return Inverted
+	default: //TODO handle this better
+		return Grayscale
+	}
+}
+
 // Modifies the image with a given mod chosen from the const vars defined above
 // FIXME Should take the color model as input that I get from parsing the command line
 // and move the switch logic in the parsing of the command line args

@@ -1,0 +1,191 @@
+.editorPage {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.editorPage .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+}
+
+.editorPage .overlap-group {
+    position: absolute;
+    width: 1098px;
+    height: 592px;
+    top: 48px;
+    left: 171px;
+    border-radius: 50px;
+    border: 3px dashed;
+    border-color: #c01ce1;
+}
+
+.editorPage .charts-rafiki {
+    position: absolute;
+    width: 659px;
+    height: 491px;
+    top: 59px;
+    left: 216px;
+}
+
+.editorPage .rectangle {
+    position: absolute;
+    width: 265px;
+    height: 78px;
+    top: 903px;
+    left: 1095px;
+    background-color: #d9d9d9;
+}
+
+.editorPage .group {
+    position: absolute;
+    width: 205px;
+    height: 83px;
+    top: 696px;
+    left: 199px;
+    background-color: #e58a7b;
+}
+
+.editorPage .text-wrapper {
+    position: absolute;
+    top: 29px;
+    left: 27px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.editorPage .group-variant {
+    top: 798px;
+    left: 199px;
+    background-color: #c7c7c7;
+    position: absolute;
+    width: 205px;
+    height: 83px;
+}
+
+.editorPage .black-and-white {
+    position: absolute;
+    top: 29px;
+    left: 77px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.editorPage .black-and-white-wrapper {
+    top: 696px;
+    left: 467px;
+    background-color: #e58a7b;
+    position: absolute;
+    width: 205px;
+    height: 83px;
+}
+
+.editorPage .black-and-white-2 {
+    left: 55px;
+    position: absolute;
+    top: 29px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.editorPage .div-wrapper {
+    top: 696px;
+    left: 744px;
+    background-color: #e58a7b;
+    position: absolute;
+    width: 205px;
+    height: 83px;
+}
+
+.editorPage .black-and-white-3 {
+    left: 62px;
+    position: absolute;
+    top: 29px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.editorPage .group-2 {
+    top: 696px;
+    left: 1035px;
+    background-color: #e58a7b;
+    position: absolute;
+    width: 205px;
+    height: 83px;
+}
+
+.editorPage .black-and-white-4 {
+    left: 22px;
+    position: absolute;
+    top: 29px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+
+
+/* Custom button styles */
+.editorPage .submit-button {
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 12px 24px; /* Top/Bottom and Left/Right padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* smooth transitions */
+}
+
+/* Hover effect */
+.editorPage .submit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Active state */
+.editorPage .submit-button:active {
+    background-color: #004080; /* Even darker blue on click */
+    transform: scale(0.95); /* Slightly smaller on click */
+}
+
+/* Optional: Disabled state */
+.editorPage .submit-button:disabled {
+    background-color: #ccc; /* Gray background */
+    color: #666; /* Gray text */
+    cursor: not-allowed; /* Not allowed cursor */
+}

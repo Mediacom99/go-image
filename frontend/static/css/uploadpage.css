@@ -1,0 +1,86 @@
+.uploadPage {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.uploadPage .overlap-group-wrapper {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+}
+
+.uploadPage .overlap-group {
+    position: relative;
+    width: 1294px;
+    height: 842px;
+    top: 77px;
+    left: 73px;
+    border-radius: 50px;
+    border: 3px dashed;
+    border-color: #c01ce1;
+}
+
+.uploadPage .carica-o-trascina-l {
+    position: absolute;
+    width: 990px;
+    top: 383px;
+    left: 149px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #adadad;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.uploadPage .text-wrapper {
+    text-decoration: underline;
+}
+
+.uploadPage .span {
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #adadad;
+    font-size: 40px;
+    letter-spacing: 0;
+}
+
+
+
+
+
+/* Custom button styles */
+.uploadPage .submit-button {
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 12px 24px; /* Top/Bottom and Left/Right padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* smooth transitions */
+}
+
+/* Hover effect */
+.uploadPage .submit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Active state */
+.uploadPage .submit-button:active {
+    background-color: #004080; /* Even darker blue on click */
+    transform: scale(0.95); /* Slightly smaller on click */
+}
+
+/* Optional: Disabled state */
+.uploadPage .submit-button:disabled {
+    background-color: #ccc; /* Gray background */
+    color: #666; /* Gray text */
+    cursor: not-allowed; /* Not allowed cursor */
+}
