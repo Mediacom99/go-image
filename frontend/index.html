@@ -7,44 +7,26 @@
     <link rel="stylesheet" href="static/css/wireframe3.css"/>
     <script defer src="static/js/upload.js"></script>
   </head>
-
-
   <body>
-
+    
     <!-- Home page, first wireframe -->
     <div class="uploadPage">
       <div class="overlap-group-wrapper">
         <div class="overlap-group">
           <p class="carica-o-trascina-l">
-            <span class="text-wrapper">Upload</span>
-	    <span class="span"> or drag image</span>
+            <span class="text-wrapper" id="uploadInputImageButton">Upload image</span>
+	    <!-- <span class="span"> or drag image</span> -->
           </p>
+	  <img id="previewImage" src="" alt="Image Preview" style="display: none;" />
         </div>
       </div>
 
-      <button id="goEditorPage" class="submit-button">
+      <input type="file" id="inputImage" accept="image/*" style:"display: none;">
+      <button id="goEditorPageButton" class="submit-button">
 	Go to Image Editor
-      </button>
-
-      
+      </button>      
     </div>
 
     
-    
-      <!-- Image editor, third wireframe (after pressing button) -->
-      <!-- <div class="wireframe3"> -->
-      <!-- 	  <div class="div"> -->
-      <!--       <div class="overlap-group"><img class="charts-rafiki" src="img/rafiki.png" /></div> -->
-      <!--       <div class="rectangle"></div> -->
-      <!--       <div class="group"><div class="text-wrapper">Greyscale</div></div> -->
-      <!--       <div class="group-variant"><div class="black-and-white">Inverted Color</div></div> -->
-      <!--       <div class="black-and-white-wrapper"><div class="black-and-white-2">Rotate</div></div> -->
-      <!--       <div class="div-wrapper"><div class="black-and-white-3">Boxed</div></div> -->
-      <!--       <div class="group-2"><div class="black-and-white-4">Inverted Color</div></div> -->
-      <!-- 	  </div> -->
-      <!-- 	</div> -->
-	
   </body>
-
 </html>
-

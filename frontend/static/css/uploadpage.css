@@ -22,6 +22,10 @@
     border-radius: 50px;
     border: 3px dashed;
     border-color: #c01ce1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .uploadPage .carica-o-trascina-l {
@@ -55,7 +59,7 @@
 
 
 /* Custom button styles */
-.uploadPage .submit-button {
+#goEditorPageButton {
     background-color: #007BFF; /* Blue background */
     color: white; /* White text */
     border: none; /* No border */
@@ -67,20 +71,39 @@
 }
 
 /* Hover effect */
-.uploadPage .submit-button:hover {
+#goEditorPageButton:hover {
     background-color: #0056b3; /* Darker blue on hover */
     transform: scale(1.05); /* Slightly larger on hover */
 }
 
 /* Active state */
-.uploadPage .submit-button:active {
+#goEditorPageButton:active {
     background-color: #004080; /* Even darker blue on click */
     transform: scale(0.95); /* Slightly smaller on click */
 }
 
 /* Optional: Disabled state */
-.uploadPage .submit-button:disabled {
+#goEditorPageButton:disabled {
     background-color: #ccc; /* Gray background */
     color: #666; /* Gray text */
     cursor: not-allowed; /* Not allowed cursor */
+}
+
+/* Deals with input image and input image preview */
+
+/* Hide the default file input */
+#inputImage {
+    display: none;
+}
+
+#previewImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    position: absolute; /* Ensure it overlays correctly within the box */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }

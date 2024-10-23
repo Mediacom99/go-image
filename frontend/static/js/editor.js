@@ -1,6 +1,6 @@
 // Image Editor Page
 
-// Return home button handler
-document.getElementById("goHome").onclick = function () {
+// Redirect home button
+document.getElementById("goHomeButton").onclick = function () {
     location.href = "index.html";
 };
