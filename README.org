@@ -12,7 +12,8 @@ I need/want to learn Golang so I guess I'll do something with the `image` module
 2. Add parallelization if it makes sense
 3. Divide library in multiple source files
 4. Web UI with HTML/CSS (export from figma thanks to UI/UX designer collaborator)
-5. List of things that I could implement:
+5. wasm ?
+6. List of things that I could implement:
    - Select zone in image with same color so that I can change the rest
    - Transformation (Rotation, Shearing)
    - Resizing
